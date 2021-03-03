@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/slide-navigation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+  </head>
+  <body>
+    <article>
+      <h1>JSON</h1>
+      <h2>Einsatzgebiete</h2>
+      <p>
+        JSON wird zur Übertragung und zum Speichern strukturierter Daten
+        eingesetzt. Es dient als Datenformat bei der Datenübertragung
+        (Serialisierung). Insbesondere bei Webanwendungen und mobilen Apps wird
+        es in Verbindung mit JavaScript, Ajax oder WebSockets zum Übertragen von
+        Daten zwischen dem Client und dem Server häufig genutzt.
+      </p>
+      <h2>Datenstruktur und Formatdefinition</h2>
+      <p>
+        Die Daten können beliebig verschachtelt werden, beispielsweise ist ein
+        Array von Objekten möglich, welche wiederum Arrays oder Objekte
+        enthalten.
+      </p>
+
+      <h2>JSON kennt die folgenden Typen von Elementen.</h2>
+
+      <h3>Nullwert</h3>
+      <p>wird durch das Schlüsselwort null dargestellt.</p>
+
+      <h3>Boolescher Wert</h3>
+      <p>
+        wird durch die Schlüsselwörter true und false dargestellt. Dies sind
+        keine Zeichenketten. Sie werden daher, wie null, nicht in
+        Anführungszeichen gesetzt.
+      </p>
+
+      <h3>Zahl</h3>
+      <p>
+        ist eine Folge der Ziffern 0–9. Diese Folge kann durch ein negatives
+        Vorzeichen - eingeleitet und durch einen Dezimalpunkt . unterbrochen
+        sein. Die Zahl kann durch die Angabe eines Exponenten e oder E ergänzt
+        werden, dem ein optionales Vorzeichen + oder - und eine Folge der
+        Ziffern 0–9 folgt.
+      </p>
+
+      <h3>Zeichenkette</h3>
+      <p>
+        beginnt und endet mit doppelten geraden Anführungszeichen ("). Sie kann
+        Unicode-Zeichen und durch \ eingeleitete Escape-Sequenzen enthalten.
+      </p>
+
+      <h3>Array</h3>
+      <p>
+        beginnt mit [ und endet mit ]. Es enthält eine durch Kommata geteilte,
+        geordnete Liste von Elementen gleichen oder verschiedenen Typs. Leere
+        Arrays sind zulässig.
+      </p>
+
+      <h3>Objekt</h3>
+
+      <p>
+        beginnt mit { und endet mit }. Es enthält eine durch Kommata geteilte,
+        ungeordnete Liste von Eigenschaften. Objekte ohne Eigenschaften („leere
+        Objekte“) sind zulässig. Eigenschaft besteht aus einem Schlüssel und
+        einem Wert, getrennt durch einen Doppelpunkt (Schlüssel : Wert). Die
+        Schlüssel sollten eindeutig sein. der Schlüssel ist eine Zeichenkette.
+        der Wert ist ein beliebiges Element.
+      </p>
+
+      <h2>Beispiel</h2>
+    </article>
+    <footer>
+      <button id="prev">Weiter</button>
+      <button id="next">Weiter</button>
+    </footer>
+    <script>
+      const example = {
+        Herausgeber: "Xema",
+        Nummer: "1234-5678-9012-3456",
+        Deckung: 20,
+        Waehrung: "EURO",
+        Inhaber: {
+          Name: "Mustermann",
+          Vorname: "Max",
+          maennlich: true,
+          Hobbys: ["Reiten", "Golfen", "Lesen"],
+          Alter: 42,
+          Kinder: [],
+          Partner: ""
+        }
+      };
+
+      console.log(JSON.stringify(example));
+    </script>
+  </body>
+</html>

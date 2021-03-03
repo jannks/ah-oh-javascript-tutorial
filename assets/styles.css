@@ -1,0 +1,25 @@
+footer {
+  border-top: 1px solid black;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.standard-table td,
+.standard-table th {
+  border: 0;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-left-color: currentcolor;
+  border-left-style: none;
+  border-left-width: 0px;
+  border-left: 2px solid #fff;
+  padding: 12px;
+}
+
+.standard-table td,
+.standard-table th {
+  text-align: left;
+  background-color: #eee;
+  border-bottom: 2px solid #fff;
+}

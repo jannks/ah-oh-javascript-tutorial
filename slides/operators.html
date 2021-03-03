@@ -1,0 +1,229 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/slide-navigation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+  </head>
+  <body>
+    <article>
+      <h1>JavaScript Operatoren</h1>
+
+      <h2>Zusammengesetzte Zuweisungsoperatoren</h2>
+      <table class="standard-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Abgekürzter Operator</th>
+            <th>Ausgeschriebener Operator</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Zuweisung
+            </td>
+            <td><code>x = y</code></td>
+            <td><code>x = y</code></td>
+          </tr>
+          <tr>
+            <td>
+              Addition
+            </td>
+            <td><code>x += y</code></td>
+            <td><code>x = x + y</code></td>
+          </tr>
+          <tr>
+            <td>
+              Subraktion
+            </td>
+            <td><code>x -= y</code></td>
+            <td><code>x = x - y</code></td>
+          </tr>
+          <tr>
+            <td>
+              Multiplikation
+            </td>
+            <td><code>x *= y</code></td>
+            <td><code>x = x * y</code></td>
+          </tr>
+          <tr>
+            <td>
+              Division
+            </td>
+            <td><code>x /= y</code></td>
+            <td><code>x = x / y</code></td>
+          </tr>
+          <tr>
+            <td>
+              Modulo (Division mit Rest)
+            </td>
+            <td><code>x %= y</code></td>
+            <td><code>x = x % y</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Vergleichsoperatoren</h2>
+      <table class="standard-table">
+        <thead>
+          <tr>
+            <th scope="col">Operator</th>
+            <th scope="col">Beschreibung</th>
+            <th scope="col">Beispiele, die <code>true</code> zurückgeben</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Equal (<code>==</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn die Operanden gleich sind.
+            </td>
+            <td>
+              <code>3 == var1</code>
+              <p><code>"3" == var1</code></p>
+              <code>3 == '3'</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Not equal (<code>!=</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn die Operanden ungleich sind.
+            </td>
+            <td>
+              <code
+                >var1 != 4<br />
+                var2 != "3"</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Strict equal (<code>===</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn die Operanden gleich sind und
+              auch der Typ übereinstimmt.
+            </td>
+            <td><code>3 === var1</code></td>
+          </tr>
+          <tr>
+            <td>
+              Strict not equal (<code>!==</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn die Operanden vom selben Typ
+              sind, doch nicht den selben Wert haben, oder wenn sie den selben
+              Wert haben, doch nicht vom selben Typ sind.
+            </td>
+            <td>
+              <code
+                >var1 !== "3"<br />
+                3 !== '3'</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Greater than (<code>&gt;</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn der linke Operand größer dem
+              rechten Operanden ist.
+            </td>
+            <td>
+              <code
+                >var2 &gt; var1<br />
+                "12" &gt; 2</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Greater than or equal (<code>&gt;=</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn der linke Operand größer als,
+              oder gleich dem linken Operanden ist.
+            </td>
+            <td>
+              <code
+                >var2 &gt;= var1<br />
+                var1 &gt;= 3</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Less than (<code>&lt;</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn der linke Operand kleiner dem
+              rechten Operanden ist.
+            </td>
+            <td>
+              <code
+                >var1 &lt; var2<br />
+                "2" &lt; 12</code
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Less than or equal (<code>&lt;=</code>)
+            </td>
+            <td>
+              Gibt <code>true</code> zurück, wenn der linke Operand kleiner als,
+              oder gleich dem rechten Operanden ist.
+            </td>
+            <td>
+              <code
+                >var1 &lt;= var2<br />
+                var2 &lt;= 5</code
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <footer>
+      <button id="prev">Weiter</button>
+      <button id="next">Weiter</button>
+    </footer>
+    <script>
+      // dynamic typing
+      let variable;
+
+      function setValue(val) {
+        if (val === "input-check") {
+          val = document.getElementById("value-input").value;
+        }
+        variable = val;
+        console.log(typeof variable);
+      }
+
+      // primitives
+      function primitiveExample() {
+        let primitive = "123";
+        let primitiveCopy = primitive;
+        primitiveCopy = "321";
+        console.log(primitive);
+      }
+
+      // objects
+      function objectExample() {
+        let obj = {
+          primitive: "123"
+        };
+        let objCopy = obj;
+        obj.primitive = "321";
+        console.log(obj.primitive);
+      }
+    </script>
+  </body>
+</html>

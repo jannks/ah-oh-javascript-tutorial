@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="/assets/scripts/script.js"></script>
+    <script src="/assets/scripts/slide-navigation.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+  </head>
+  <body>
+    <article>
+      <h1>JavaScript Datentypen</h1>
+
+      <h2>Dynamische Typisierung</h2>
+      <p>
+        JavaScript ist eine schwach typisierte oder dynamische
+        Programmiersprache. Datentypen werden bei einer Variable nicht explizit
+        deklariert und jede Variable kann mit Werten jedes Typen beschrieben
+        (überschrieben) werden
+      </p>
+
+      <h2>Datentypen</h2>
+
+      <ul>
+        <li onclick="setValue(undefined)">Undefined</li>
+        <li onclick="setValue(true)">Boolean</li>
+        <li onclick="setValue(1)">Number</li>
+        <li onclick="setValue('Hallo')">String</li>
+        <li onclick="setValue(null)">Null</li>
+        <li onclick="setValue({})">Object</li>
+      </ul>
+      <p>
+        <input id="value-input" type="text" />
+        <button onclick="setValue('input-check')">Check</button>
+      </p>
+
+      <h2>Primitive Werte</h2>
+      <p>
+        Alle Datentypen, bis auf Object, definieren unveränderbare Werte (Werte,
+        die nicht verändert werden können). Die Werte dieser Datentypen werden
+        als "primitive Werte" bezeichnet.
+      </p>
+      <button onclick="primitiveExample()">Beispiel</button>
+
+      <h2>Objekte</h2>
+      <p>
+        In JavaScript können Objekte als eine Sammlung von Eigenschaften
+        (Properties) angesehen werden. Mit der Object Literal Syntax werden die
+        nötigsten Eigenschaften initialisiert. Danach können Eigenschaften
+        hinzugefügt oder wieder entfernt werden. Der Wert einer Eigenschaft kann
+        von jedem Datentyp sein. Darunter können sich auch andere Objekte
+        befinden. Dadurch können komplexe Datenstrukturen realisiert werden.
+        Eigenschaften werden mit einem Key identifiziert. Ein Key ist in der
+        Regel ein String.
+      </p>
+
+      <button onclick="objectExample()">Beispiel</button>
+    </article>
+
+    <footer>
+      <button id="prev">Weiter</button>
+      <button id="next">Weiter</button>
+    </footer>
+    <script>
+      // dynamic typing
+      let variable;
+
+      function setValue(val) {
+        if (val === "input-check") {
+          val = document.getElementById("value-input").value;
+        }
+        variable = val;
+        console.log(typeof variable);
+      }
+
+      // primitives
+      function primitiveExample() {
+        let primitive = "123";
+        let primitiveCopy = primitive;
+        primitiveCopy = "321";
+        console.log(primitive);
+      }
+
+      // objects
+      function objectExample() {
+        let obj = {
+          primitive: "123"
+        };
+        let objCopy = obj;
+        obj.primitive = "321";
+        console.log(obj.primitive);
+      }
+    </script>
+  </body>
+</html>
