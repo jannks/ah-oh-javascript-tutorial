@@ -7,42 +7,81 @@
   </head>
   <body>
     <article>
-      <h1>JavaScript Arrays</h1>
+      <h1>JavaScript Funktionen</h1>
 
       <h2>Beschreibung</h2>
       <p>
-        JavaScript ist eine schwach typisierte oder dynamische
-        Programmiersprache. Datentypen werden bei einer Variable nicht explizit
-        deklariert und jede Variable kann mit Werten jedes Typen beschrieben
-        (überschrieben) werden
+        Eine Funktionsdefinition (auch Funktionsdeklaration oder
+        Funktionsanweisung genannt) besteht aus dem Schlüsselwort function,
+        gefolgt von:
       </p>
 
-      <h2>Ein Array erstellen</h2>
-      <button onclick="example.create()">Beispiel</button>
+      <ul>
+        <li>Den Namen der Funktion.</li>
+        <li>
+          Eine Liste von Parametern, die in runden Klammern geschrieben sind und
+          durch Kommas getrennt sind.
+        </li>
+        <li>
+          Die JavaScript Anweisungen, die durch die Funktion definiert werden
+          und innerhalb von geschweiften Klammern steht.
+        </li>
+      </ul>
 
-      <h2>Zugriff auf ein Arrayelement (mit Index)</h2>
-      <button onclick="example.access()">Beispiel</button>
+      <p>Das folgende Beispiel definiert eine Funktion mit dem Namen square:</p>
 
-      <h2>Über ein Array Iterieren</h2>
-      <button onclick="example.iterate()">Beispiel</button>
+      <pre><code><span class="token keyword">function</span> <span class="token function">square</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">
+  return</span> number <span class="token operator">*</span> number<span class="token punctuation">;</span><span class="token punctuation">
+}</span></code></pre>
 
-      <h2>Ein Element am Ende des Arrays einfügen</h2>
-      <button onclick="example.addEnd()">Beispiel</button>
+      <p>
+        Die Funktion square nimmt einen Parameter entgegen, welcher number
+        heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der
+        Parameter der Funktion (das ist number), multipliziert mit sich selbst,
+        zurückgegeben werden soll. Dabei gibt das return Statement an, welcher
+        Wert von der Funktion zurückzugeben wird.
+      </p>
 
-      <h2>Ein Element am Ende des Arrays löschen</h2>
-      <button onclick="example.deleteEnd()">Beispiel</button>
+      <pre><code><span class="token keyword">return</span> number <span class="token operator">*</span> number<span class="token punctuation">;</span>
+</code></pre>
 
-      <h2>Ein Element am Anfang des Arrays löschen</h2>
-      <button onclick="example.deleteStart()">Beispiel</button>
+      <p>
+        Bei Primitive Parameter, wie Zahlen, wird der Funktionen der Wert
+        übergeben. Werte, die der Funktion übergeben wurden und innerhalb der
+        Funktion geändert werden, ändert den Wert zwar innerhalb der Funktion,
+        aber nicht global oder in der aufrufenden Funktion.
+      </p>
 
-      <h2>Ein Element am Anfang des Arrays einfügen</h2>
-      <button onclick="example.addStart()">Beispiel</button>
+      <p>
+        Wird ein Objekt als Parameter übergeben (z. B. ein nicht primitiver Wert
+        wie ein Array oder ein selbst definiertes Objekt) und die Funktion
+        ändert die Objekteigenschaften, so sind die Änderungen außerhalb der
+        Funktion sichtbar, wie im folgendem Beispiel veranschaulicht wird:
+      </p>
 
-      <h2>Den Index eines Elements im Array ermitteln</h2>
-      <button onclick="example.findIndex()">Beispiel</button>
+      <h2>Aufruf von Funktionen</h2>
+      <p>
+        Das Definieren einer Funktion führen diese noch nicht aus. Die
+        Definition gibt der Funktion lediglich einen Namen und beschreibt was
+        geschehen soll, wenn die Funktion aufgerufen wird. Erst der Aufruf
+        ermöglicht es die Aktionen mit den angegebenen Parametern durchzuführen.
+        Zum Beispiel wird die vorher definierte Funktion square so aufgerufen:
+      </p>
+      <pre><code><span class="token function">square</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+      <p>
+        Es wird die Funktion mit dem Argument 5 aufgerufen. Die Funktion führt
+        ihre Anweisungen aus und gibt den Wert 25 zurück.
+      </p>
 
-      <h2>Ein Element mithilfe eines Index aus dem Array löschen</h2>
-      <button onclick="example.deleteIndex()">Beispiel</button>
+      <div>
+        <button onclick="primitiveExample()">
+          Beispiel Primitive Parameter
+        </button>
+        <button onclick="voidExample()">
+          Beispiel Objekt Void
+        </button>
+      </div>
     </article>
 
     <footer>
@@ -50,73 +89,28 @@
       <button id="next">Weiter</button>
     </footer>
     <script>
-      let fruits;
+      // example primitive
+      function square(number) {
+        number = number * number;
+        return number;
+      }
+      // example object void;
+      function changeModel(car) {
+        car.model = "Focus";
+      }
 
-      let example = {
-        create: function() {
-          console.clear();
-          fruits = ["Apple", "cherry", "Banana"];
-          console.log(fruits.length);
-        },
-
-        access: function() {
-          console.clear();
-          let first = fruits[0];
-          console.log(first);
-          let last = fruits[fruits.length - 1];
-          console.log(last);
-        },
-
-        iterate: function() {
-          console.clear();
-          for (let i = 0; i < fruits.length; i++) {
-            console.log(fruits[i]);
-          }
-        },
-
-        addEnd: function() {
-          console.clear();
-          let newLength = fruits.push("Orange");
-          console.log(newLength);
-          console.log(fruits);
-        },
-
-        deleteEnd: function() {
-          console.clear();
-          let last = fruits.pop();
-          console.log(last);
-          console.log(fruits);
-        },
-
-        deleteStart: function() {
-          console.clear();
-          let first = fruits.shift();
-          console.log(first);
-          console.log(fruits);
-        },
-
-        addStart: function() {
-          console.clear();
-          let newLength = fruits.unshift("Strawberry");
-          console.log(newLength);
-          console.log(fruits);
-        },
-
-        findIndex: function() {
-          console.clear();
-          let i = fruits.indexOf("Banana");
-          console.log(i);
-          console.log(fruits);
-        },
-
-        deleteIndex: function() {
-          console.clear();
-          let i = fruits.indexOf("Banana");
-          let removedItem = fruits.splice(i, 1);
-          console.log(removedItem);
-          console.log(fruits);
-        }
-      };
+      function primitiveExample() {
+        console.clear();
+        let num = 5;
+        console.log(square(5));
+        console.log(num);
+      }
+      function voidExample() {
+        console.clear();
+        let car = { brand: "Honda", model: "Accord", year: 1998 };
+        console.log(changeModel(car));
+        console.log(car);
+      }
     </script>
   </body>
 </html>

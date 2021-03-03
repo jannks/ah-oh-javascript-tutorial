@@ -1,5 +1,12 @@
 // navigation
-let pageRegister = ["welcome", "data-types", "json", "operators", "arrays"];
+let pageRegister = [
+  "welcome",
+  "data-types",
+  "json",
+  "operators",
+  "arrays",
+  "functions"
+];
 
 function navigate(direction) {
   let pageIndex = 0;

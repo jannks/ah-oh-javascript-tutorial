@@ -23,3 +23,42 @@ footer {
   background-color: #eee;
   border-bottom: 2px solid #fff;
 }
+
+code, pre {
+    background-color: #eee;
+}
+
+pre {
+    border-left: 6px solid #00458b;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0 0 24px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 24px;
+    width: 100%;
+}
+
+code {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-family: consolas,"Liberation Mono",courier,monospace;
+    padding: 0 3px;
+    word-wrap: break-word;
+}
+
+.notranslate code {
+    background-color: transparent;
+}
+
+.token.keyword {
+    color: #00458b;
+}
+
+.token.atrule, .token.attr-value, .token.function {
+    color: #b54248;
+}
+
+.token.punctuation {
+    color: #999;
+}
