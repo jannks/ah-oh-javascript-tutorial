@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="/assets/scripts/script.js"></script>
+	<script src="/assets/scripts/slide-navigation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+</head>
+
+<body>
+	<article>
+		<h1>JavaScript DOM-Manipulation</h1>
+		<p> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Dokumentation</a> </p>
+
+		<h2>Document.querySelector()</h2>
+		<p>Die Methode <code>querySelector()</code> von Document gibt das erste Element innerhalb eines Dokuments
+			zurück, welches dem
+			angegebenen Selektor bzw. Selektoren entspricht. Wurden keine Übereinstimmungen gefunden wird null
+			zurückgegeben.</p>
+
+		<h2>Document.querySelectorAll()</h2>
+		<p>
+			Die Methode querySelectorAll() von Document gibt eine statische (nicht live) NodeList zurück, die eine Liste
+			der Elemente des Dokuments darstellt, die mit der angegebenen Selektorgruppe übereinstimmen.
+		</p>
+		<div id="container">Beispiel</div>
+
+	</article>
+
+	<footer>
+		<button id="prev">Zurück</button>
+		<button id="next">Weiter</button>
+	</footer>
+	<script>
+		const container = document.querySelector("#container");
+    // container.innerHTML = "Test123"
+    // container.style.background = "red";
+    // container.style.color = "white";
+    // container.style.padding = "10px";
+    // document.querySelector('article').appendChild( container.cloneNode(true) );
+
+    /*
+    document.querySelectorAll('div').forEach(function(ele) {
+        console.log(ele);
+    });
+    */
+	</script>
+</body>
+
+</html>

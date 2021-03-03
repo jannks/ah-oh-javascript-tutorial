@@ -1,95 +1,97 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <script src="/assets/scripts/script.js"></script>
-    <script src="/assets/scripts/slide-navigation.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
-  </head>
-  <body>
-    <article>
-      <h1>JavaScript Funktionen</h1>
 
-      <h2>Beschreibung</h2>
-      <p>
-        Eine Funktionsdefinition (auch Funktionsdeklaration oder
-        Funktionsanweisung genannt) besteht aus dem Schlüsselwort function,
-        gefolgt von:
-      </p>
+<head>
+	<meta charset="UTF-8" />
+	<script src="/assets/scripts/script.js"></script>
+	<script src="/assets/scripts/slide-navigation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+</head>
 
-      <ul>
-        <li>Den Namen der Funktion.</li>
-        <li>
-          Eine Liste von Parametern, die in runden Klammern geschrieben sind und
-          durch Kommas getrennt sind.
-        </li>
-        <li>
-          Die JavaScript Anweisungen, die durch die Funktion definiert werden
-          und innerhalb von geschweiften Klammern steht.
-        </li>
-      </ul>
+<body>
+	<article>
+		<h1>JavaScript Funktionen</h1>
 
-      <p>Das folgende Beispiel definiert eine Funktion mit dem Namen square:</p>
+		<h2>Beschreibung</h2>
+		<p>
+			Eine Funktionsdefinition (auch Funktionsdeklaration oder
+			Funktionsanweisung genannt) besteht aus dem Schlüsselwort function,
+			gefolgt von:
+		</p>
 
-      <pre><code><span class="token keyword">function</span> <span class="token function">square</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">
+		<ul>
+			<li>Den Namen der Funktion.</li>
+			<li>
+				Eine Liste von Parametern, die in runden Klammern geschrieben sind und
+				durch Kommas getrennt sind.
+			</li>
+			<li>
+				Die JavaScript Anweisungen, die durch die Funktion definiert werden
+				und innerhalb von geschweiften Klammern steht.
+			</li>
+		</ul>
+
+		<p>Das folgende Beispiel definiert eine Funktion mit dem Namen square:</p>
+
+		<pre><code><span class="token keyword">function</span> <span class="token function">square</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">
   return</span> number <span class="token operator">*</span> number<span class="token punctuation">;</span><span class="token punctuation">
 }</span></code></pre>
 
-      <p>
-        Die Funktion square nimmt einen Parameter entgegen, welcher number
-        heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der
-        Parameter der Funktion (das ist number), multipliziert mit sich selbst,
-        zurückgegeben werden soll. Dabei gibt das return Statement an, welcher
-        Wert von der Funktion zurückzugeben wird.
-      </p>
+		<p>
+			Die Funktion square nimmt einen Parameter entgegen, welcher number
+			heißt. Die Funktion besteht aus einer Anweisung, die besagt, dass der
+			Parameter der Funktion (das ist number), multipliziert mit sich selbst,
+			zurückgegeben werden soll. Dabei gibt das return Statement an, welcher
+			Wert von der Funktion zurückzugeben wird.
+		</p>
 
-      <pre><code><span class="token keyword">return</span> number <span class="token operator">*</span> number<span class="token punctuation">;</span>
+		<pre><code><span class="token keyword">return</span> number <span class="token operator">*</span> number<span class="token punctuation">;</span>
 </code></pre>
 
-      <p>
-        Bei Primitive Parameter, wie Zahlen, wird der Funktionen der Wert
-        übergeben. Werte, die der Funktion übergeben wurden und innerhalb der
-        Funktion geändert werden, ändert den Wert zwar innerhalb der Funktion,
-        aber nicht global oder in der aufrufenden Funktion.
-      </p>
+		<p>
+			Bei Primitive Parameter, wie Zahlen, wird der Funktionen der Wert
+			übergeben. Werte, die der Funktion übergeben wurden und innerhalb der
+			Funktion geändert werden, ändert den Wert zwar innerhalb der Funktion,
+			aber nicht global oder in der aufrufenden Funktion.
+		</p>
 
-      <p>
-        Wird ein Objekt als Parameter übergeben (z. B. ein nicht primitiver Wert
-        wie ein Array oder ein selbst definiertes Objekt) und die Funktion
-        ändert die Objekteigenschaften, so sind die Änderungen außerhalb der
-        Funktion sichtbar, wie im folgendem Beispiel veranschaulicht wird:
-      </p>
+		<p>
+			Wird ein Objekt als Parameter übergeben (z. B. ein nicht primitiver Wert
+			wie ein Array oder ein selbst definiertes Objekt) und die Funktion
+			ändert die Objekteigenschaften, so sind die Änderungen außerhalb der
+			Funktion sichtbar, wie im folgendem Beispiel veranschaulicht wird:
+		</p>
 
-      <h2>Aufruf von Funktionen</h2>
-      <p>
-        Das Definieren einer Funktion führen diese noch nicht aus. Die
-        Definition gibt der Funktion lediglich einen Namen und beschreibt was
-        geschehen soll, wenn die Funktion aufgerufen wird. Erst der Aufruf
-        ermöglicht es die Aktionen mit den angegebenen Parametern durchzuführen.
-        Zum Beispiel wird die vorher definierte Funktion square so aufgerufen:
-      </p>
-      <pre><code><span class="token function">square</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<h2>Aufruf von Funktionen</h2>
+		<p>
+			Das Definieren einer Funktion führen diese noch nicht aus. Die
+			Definition gibt der Funktion lediglich einen Namen und beschreibt was
+			geschehen soll, wenn die Funktion aufgerufen wird. Erst der Aufruf
+			ermöglicht es die Aktionen mit den angegebenen Parametern durchzuführen.
+			Zum Beispiel wird die vorher definierte Funktion square so aufgerufen:
+		</p>
+		<pre><code><span class="token function">square</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-      <p>
-        Es wird die Funktion mit dem Argument 5 aufgerufen. Die Funktion führt
-        ihre Anweisungen aus und gibt den Wert 25 zurück.
-      </p>
+		<p>
+			Es wird die Funktion mit dem Argument 5 aufgerufen. Die Funktion führt
+			ihre Anweisungen aus und gibt den Wert 25 zurück.
+		</p>
 
-      <div>
-        <button onclick="primitiveExample()">
+		<div>
+			<button onclick="primitiveExample()">
           Beispiel Primitive Parameter
         </button>
-        <button onclick="voidExample()">
+			<button onclick="voidExample()">
           Beispiel Objekt Void
         </button>
-      </div>
-    </article>
+		</div>
+	</article>
 
-    <footer>
-      <button id="prev">Weiter</button>
-      <button id="next">Weiter</button>
-    </footer>
-    <script>
-      // example primitive
+	<footer>
+		<button id="prev">Zurück</button>
+		<button id="next">Weiter</button>
+	</footer>
+	<script>
+		// example primitive
       function square(number) {
         number = number * number;
         return number;
@@ -111,6 +113,7 @@
         console.log(changeModel(car));
         console.log(car);
       }
-    </script>
-  </body>
+	</script>
+</body>
+
 </html>

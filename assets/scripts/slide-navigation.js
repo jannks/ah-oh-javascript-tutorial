@@ -5,7 +5,8 @@ let pageRegister = [
   "json",
   "operators",
   "arrays",
-  "functions"
+  "functions",
+  "manipulate-dom"
 ];
 
 function navigate(direction) {
