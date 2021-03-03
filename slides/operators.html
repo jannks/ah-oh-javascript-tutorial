@@ -82,9 +82,7 @@
               Gibt <code>true</code> zurück, wenn die Operanden gleich sind.
             </td>
             <td>
-              <code>3 == var1</code>
-              <p><code>"3" == var1</code></p>
-              <code>3 == '3'</code>
+              <button onclick="compare.equal()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -95,10 +93,7 @@
               Gibt <code>true</code> zurück, wenn die Operanden ungleich sind.
             </td>
             <td>
-              <code
-                >var1 != 4<br />
-                var2 != "3"</code
-              >
+              <button onclick="compare.notEqual()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -109,7 +104,7 @@
               Gibt <code>true</code> zurück, wenn die Operanden gleich sind und
               auch der Typ übereinstimmt.
             </td>
-            <td><code>3 === var1</code></td>
+            <td><button onclick="compare.strictEqual()">Beispiel</button></td>
           </tr>
           <tr>
             <td>
@@ -121,10 +116,7 @@
               Wert haben, doch nicht vom selben Typ sind.
             </td>
             <td>
-              <code
-                >var1 !== "3"<br />
-                3 !== '3'</code
-              >
+              <button onclick="compare.strictNotEqual()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -136,10 +128,7 @@
               rechten Operanden ist.
             </td>
             <td>
-              <code
-                >var2 &gt; var1<br />
-                "12" &gt; 2</code
-              >
+              <button onclick="compare.greaterThan()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -151,10 +140,7 @@
               oder gleich dem linken Operanden ist.
             </td>
             <td>
-              <code
-                >var2 &gt;= var1<br />
-                var1 &gt;= 3</code
-              >
+              <button onclick="compare.greaterThanEqual()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -166,10 +152,7 @@
               rechten Operanden ist.
             </td>
             <td>
-              <code
-                >var1 &lt; var2<br />
-                "2" &lt; 12</code
-              >
+              <button onclick="compare.lessThan()">Beispiel</button>
             </td>
           </tr>
           <tr>
@@ -181,10 +164,7 @@
               oder gleich dem rechten Operanden ist.
             </td>
             <td>
-              <code
-                >var1 &lt;= var2<br />
-                var2 &lt;= 5</code
-              >
+              <button onclick="compare.lessThanEqual()">Beispiel</button>
             </td>
           </tr>
         </tbody>
@@ -196,34 +176,51 @@
       <button id="next">Weiter</button>
     </footer>
     <script>
-      // dynamic typing
-      let variable;
+      let var1 = 3;
+      let var2 = 4;
 
-      function setValue(val) {
-        if (val === "input-check") {
-          val = document.getElementById("value-input").value;
+      let compare = {
+        equal: function() {
+          console.clear();
+          console.log(3 == var1);
+          console.log("3" == var1);
+          console.log(3 == "3");
+        },
+        notEqual: function() {
+          console.clear();
+          console.log(var1 != 4);
+          console.log(var2 != "3");
+        },
+        strictEqual: function() {
+          console.clear();
+          console.log(3 === var1);
+        },
+        strictNotEqual: function() {
+          console.clear();
+          console.log(var1 !== "3");
+          console.log(3 !== "3");
+        },
+        greaterThan: function() {
+          console.clear();
+          console.log(var2 > var1);
+          console.log("12" > 2);
+        },
+        greaterThanEqual: function() {
+          console.clear();
+          console.log(var2 >= var1);
+          console.log(var1 >= 3);
+        },
+        lessThan: function() {
+          console.clear();
+          console.log(var1 < var2);
+          console.log("2" < 12);
+        },
+        lessThanEqual: function() {
+          console.clear();
+          console.log(var1 <= var2);
+          console.log(var2 <= 5);
         }
-        variable = val;
-        console.log(typeof variable);
-      }
-
-      // primitives
-      function primitiveExample() {
-        let primitive = "123";
-        let primitiveCopy = primitive;
-        primitiveCopy = "321";
-        console.log(primitive);
-      }
-
-      // objects
-      function objectExample() {
-        let obj = {
-          primitive: "123"
-        };
-        let objCopy = obj;
-        obj.primitive = "321";
-        console.log(obj.primitive);
-      }
+      };
     </script>
   </body>
 </html>
