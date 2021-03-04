@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="/assets/scripts/script.js"></script>
+	<script src="/assets/scripts/slide-navigation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+</head>
+
+<body>
+	<article>
+		<h1>Document Object Model</h1>
+		<p> <a target="_blank"
+				href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">Dokumentation</a> </p>
+
+		<p>Das Document Object Model ist eine API für HTML- und XML-Dokumente. Es bildet die strukturelle Repräsentation
+			des Dokumentes und ermöglicht dir, dessen Inhalt und visuelle Darstellung zu verändern. Im Wesentlichen
+			verbindet es Webseiten mit Scripts oder Programmiersprachen.</p>
+
+
+	</article>
+
+	<footer>
+		<button id="prev">Zurück</button>
+		<button id="next">Weiter</button>
+	</footer>
+	<script>
+		function loop(node) {
+      console.log(node);
+
+      let nodes = node.childNodes;
+
+      for (let i = 0; i < nodes.length; i++){
+        if (!nodes[i]) {
+          continue;
+        }
+        if (nodes[i].childNodes.length > 0) {
+          loop(nodes[i]);
+        }
+      }
+    }
+
+    // loop(document);
+
+
+	</script>
+</body>
+
+</html>

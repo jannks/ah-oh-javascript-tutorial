@@ -4,8 +4,11 @@ let pageRegister = [
   "data-types",
   "json",
   "operators",
+  "if-else",
   "arrays",
   "functions",
+  "practice",
+  "document-object-model",
   "manipulate-dom"
 ];
 

@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<script src="/assets/scripts/script.js"></script>
+	<script src="/assets/scripts/slide-navigation.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+</head>
+
+<body>
+	<article>
+		<h1>if...else</h1>
+		<p> <a target="_blank"
+				href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">Dokumentation</a>
+		</p>
+		<p>Die if-Anweisung führt Anweisungen aus, wenn eine bestimmte Bedingung zu true ausgewertet wird. Wird die
+			Bedingung zu false ausgewertet, können andere Anweisungen ausgeführt werden.</p>
+
+		<h2>Syntax</h2>
+		<pre>if (bedingung)<em> anweisung1</em> [else <em>anweisung2</em>]</pre>
+
+		<h3>bedingung</h3>
+		<p>
+			Ein Ausdruck, der zu true oder false ausgewertet wird.
+		</p>
+
+		<h3>anweisung1</h3>
+		<p>
+			Eine Anweisung, die ausgeführt wird, wenn bedingung zu true ausgewertet wird. Diese Anweisung kann jede
+			gültige Anweisung sein, auch eine if-Anweisung. Um mehrere Anweisungen auszuführen, muss eine
+			block-Anweisung ({...}) genutzt werden, um die Anweisungen zu gruppieren.
+		</p>
+
+		<h3>anweisung2</h3>
+		<p>
+			Eine Anweisung, die ausgeführt wird, wenn bedingung zu false ausgewertet wird und die else Klausel
+			existiert. Auch hier können alle Anweisungen, egal ob block-Anweisung ({...}) oder weitere if-Anweisungen
+			genutzt werden.
+		</p>
+
+
+	</article>
+
+	<footer>
+		<button id="prev">Zurück</button>
+		<button id="next">Weiter</button>
+	</footer>
+	<script>
+		// input
+    let age = 20; // years
+    let money = 18; // EUR
+
+    // parameters
+    let minAge = 18; // years
+    let price = 7; // EUR
+
+    // cigarette machine
+    if (age >= minAge) {
+
+      if (money >= price) {
+        console.log('success');
+
+        if (money > price) {
+          console.log('refund ' + (money - price) + ' EUR');
+        }
+
+      } else {
+        console.log('missing ' + (price - money) + ' EUR');
+      }
+
+    } else {
+      console.log('you are too young');
+    }
+    
+
+	</script>
+</body>
+
+</html>
